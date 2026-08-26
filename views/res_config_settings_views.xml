@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.google.preferred.source</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_settings']" position="inside">
+                <setting id="google_preferred_source_setting" string="Google Preferred Source"
+                         help="Help readers and shoppers find your site as a preferred source in Google Search, Top Stories, and AI Overviews.">
+                    <field name="has_google_preferred_source"/>
+                    <div class="content-group" invisible="not has_google_preferred_source">
+                        <div class="row mt16">
+                            <label class="col-lg-4 o_light_label" string="Integration Mode" for="google_preferred_source_mode"/>
+                            <field name="google_preferred_source_mode" widget="radio" class="col-lg-8" required="has_google_preferred_source"/>
+                        </div>
+                        <div class="row mt8" invisible="google_preferred_source_mode not in ['js', 'advanced_js']">
+                            <label class="col-lg-4 o_light_label" string="Button Theme" for="google_preferred_source_theme"/>
+                            <field name="google_preferred_source_theme" widget="radio" options="{'horizontal': true}" class="col-lg-8"/>
+                        </div>
+                        <div class="row mt8" invisible="google_preferred_source_mode not in ['js', 'advanced_js']">
+                            <label class="col-lg-4 o_light_label" string="Language Code Override" for="google_preferred_source_lang"/>
+                            <field name="google_preferred_source_lang" placeholder="e.g. en, es, fr (leave blank for automatic)" class="col-lg-8"/>
+                        </div>
+                        <div class="row mt8">
+                            <div class="col-12">
+                                <field name="google_preferred_source_auto_footer"/>
+                                <label class="o_light_label ms-2" string="Show automatically in Website Footer" for="google_preferred_source_auto_footer"/>
+                            </div>
+                        </div>
+                        <div class="row mt8">
+                            <div class="col-12">
+                                <field name="google_preferred_source_auto_product"/>
+                                <label class="o_light_label ms-2" string="Show automatically on eCommerce Product Pages" for="google_preferred_source_auto_product"/>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

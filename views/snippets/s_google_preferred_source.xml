@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_google_preferred_source" name="Google Preferred Source">
+        <section class="s_google_preferred_source py-3 text-center" data-name="Google Preferred Source">
+            <div class="container">
+                <t t-set="pref_website" t-value="website or request.env['website'].get_current_website()"/>
+                <t t-set="is_enabled" t-value="pref_website.has_google_preferred_source"/>
+                <t t-set="mode" t-value="pref_website.google_preferred_source_mode or 'js'"/>
+                <t t-set="theme" t-value="pref_website.google_preferred_source_theme or 'light'"/>
+                <t t-set="lang" t-value="pref_website.google_preferred_source_lang"/>
+
+                <div class="s_google_preferred_source_wrapper d-inline-block">
+                    <!-- Standard JavaScript SDK Mode -->
+                    <t t-if="mode == 'js'">
+                        <div google-add-preferred-source-btn=""
+                             t-att-data-theme="theme"
+                             t-att-data-lang="lang or None"
+                             class="d-inline-block"/>
+                    </t>
+
+                    <!-- Advanced JavaScript SDK Mode (Manual Trigger) -->
+                    <t t-elif="mode == 'advanced_js'">
+                        <button type="button"
+                                class="btn btn-outline-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm o_google_pref_manual_trigger">
+                            <i class="fa fa-google text-primary"/>
+                            <span>Add as Preferred Source</span>
+                            <i class="fa fa-star small ms-1 opacity-75 text-warning"/>
+                        </button>
+                    </t>
+
+                    <!-- Deeplink Mode Fallback -->
+                    <t t-else="">
+                        <a t-att-href="pref_website.get_google_preferred_source_url()"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm o_google_pref_deeplink">
+                            <i class="fa fa-google text-primary"/>
+                            <span>Add as Preferred Source</span>
+                            <i class="fa fa-external-link small ms-1 opacity-75"/>
+                        </a>
+                    </t>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

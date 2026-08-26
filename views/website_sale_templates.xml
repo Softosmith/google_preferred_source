@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_google_preferred_source" inherit_id="website_sale.product" name="Product Page Google Preferred Source">
+        <xpath expr="//div[hasclass('o_wsale_product_details_content_section_cta')]" position="after">
+            <t t-set="curr_website" t-value="website or request.env['website'].get_current_website()"/>
+            <t t-if="curr_website and curr_website.has_google_preferred_source and curr_website.google_preferred_source_auto_product">
+                <div class="o_wsale_product_details_content_section o_wsale_product_details_content_section_google_pref mb-3 p-3 bg-light rounded border text-center">
+                    <div class="small fw-semibold text-muted mb-2">Prefer our store on Google Search</div>
+                    <t t-call="google_preferred_source.s_google_preferred_source"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
