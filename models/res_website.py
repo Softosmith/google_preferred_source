@@ -15,7 +15,6 @@ class Website(models.Model):
     )
     google_preferred_source_mode = fields.Selection([
         ('js', 'Standard JavaScript Button'),
-        ('advanced_js', 'Advanced JavaScript (Manual Control)'),
         ('deeplink', 'Deeplink / Direct URL'),
     ], string="Integration Mode", default='js', required=True)
 
@@ -47,8 +46,6 @@ class Website(models.Model):
             parsed = urlparse(domain if '://' in domain else f'https://{domain}')
             host = parsed.netloc or parsed.path
             clean_domain = host.split(':')[0] if ':' in host else host
-            if clean_domain and clean_domain != 'localhost' and '.' in clean_domain:
-                return f"https://www.google.com/preferences/source?q={quote(clean_domain)}"
-            elif clean_domain:
+            if clean_domain:
                 return f"https://www.google.com/preferences/source?q={quote(clean_domain)}"
         return "https://www.google.com/preferences/source"

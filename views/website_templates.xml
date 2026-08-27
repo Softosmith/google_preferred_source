@@ -8,17 +8,6 @@
                 <t t-if="curr_website.google_preferred_source_mode == 'js'">
                     <script async="async" src="https://news.google.com/swg/js/v1/publisher.js"></script>
                 </t>
-                <t t-elif="curr_website.google_preferred_source_mode == 'advanced_js'">
-                    <script async="async" preferred-sources-control="manual" src="https://news.google.com/swg/js/v1/publisher.js"></script>
-                    <script type="text/javascript">
-                        (self.PREFERRED_SOURCE = self.PREFERRED_SOURCE || []).push(function(preferredSource) {
-                            preferredSource.init({
-                                theme: '<t t-out="curr_website.google_preferred_source_theme or \'light\'"/>',
-                                lang: '<t t-out="curr_website.google_preferred_source_lang or \'\'"/>'
-                            });
-                        });
-                    </script>
-                </t>
             </t>
         </head>
         <!-- Auto Footer display -->

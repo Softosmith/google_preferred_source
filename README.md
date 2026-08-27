@@ -13,8 +13,7 @@ Easily integrate Google's official **Preferred Sources** SDK into your Odoo Webs
 ## 🌟 Key Features
 
 * **Multi-Website Configuration**: Configure integration mode, theme, and language per website under **Website > Configuration > Settings**.
-* **Standard JavaScript SDK**: Automatically renders Google's localized "Add to Preferred Sources" badge with light or dark theme customization.
-* **Advanced JavaScript SDK**: Enables programmatic control and custom UI click triggers via Google's manual callback queue.
+* **Standard JavaScript SDK**: Automatically renders Google's localized "Add to Preferred Sources" badge with light or dark theme customization. Falls back to the Deeplink button automatically if Google's SDK doesn't render a badge for your domain.
 * **Deeplink Direct URL**: Direct fallback to Google's Source Preferences tool (`https://www.google.com/preferences/source?q=YOUR_DOMAIN`).
 * **Website Building Block (Snippet)**: Drag-and-drop "Google Preferred Source" snippet available in Odoo Website Builder under Social / Content categories.
 * **Automated Placement Options**: Option to auto-display in the Website Footer and on eCommerce Product Pages.
@@ -29,7 +28,7 @@ Easily integrate Google's official **Preferred Sources** SDK into your Odoo Webs
 4. Go to **Website > Configuration > Settings**.
 5. Under the **Google Preferred Source** section:
    - Enable **Google Preferred Source**.
-   - Select your **Integration Mode** (*Standard JavaScript Button*, *Advanced JavaScript*, or *Deeplink*).
+   - Select your **Integration Mode** (*Standard JavaScript Button* or *Deeplink*).
    - Pick your **Button Theme** (*Light* or *Dark*).
    - Optionally enter a **Language Code Override** (e.g. `en`, `es`, `fr`).
    - Check **Show automatically in Website Footer** or **Show automatically on eCommerce Product Pages**.

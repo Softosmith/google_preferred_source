@@ -34,11 +34,11 @@ class TestGooglePreferredSource(TransactionCase):
         config = self.env['res.config.settings'].create({
             'website_id': self.website.id,
             'has_google_preferred_source': True,
-            'google_preferred_source_mode': 'advanced_js',
+            'google_preferred_source_mode': 'deeplink',
             'google_preferred_source_theme': 'light',
             'google_preferred_source_lang': 'de',
         })
         config.execute()
-        self.assertEqual(self.website.google_preferred_source_mode, 'advanced_js')
+        self.assertEqual(self.website.google_preferred_source_mode, 'deeplink')
         self.assertEqual(self.website.google_preferred_source_theme, 'light')
         self.assertEqual(self.website.google_preferred_source_lang, 'de')

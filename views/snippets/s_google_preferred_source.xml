@@ -15,17 +15,14 @@
                         <div google-add-preferred-source-btn=""
                              t-att-data-theme="theme"
                              t-att-data-lang="lang or None"
-                             class="d-inline-block"/>
-                    </t>
-
-                    <!-- Advanced JavaScript SDK Mode (Manual Trigger) -->
-                    <t t-elif="mode == 'advanced_js'">
-                        <button type="button"
-                                class="btn btn-outline-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm o_google_pref_manual_trigger">
+                             class="d-inline-block o_google_pref_sdk_slot"/>
+                        <a t-att-href="pref_website.get_google_preferred_source_url()"
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn btn-outline-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm o_google_pref_deeplink o_google_pref_fallback d-none">
                             <i class="fa fa-google text-primary"/>
                             <span>Add as Preferred Source</span>
-                            <i class="fa fa-star small ms-1 opacity-75 text-warning"/>
-                        </button>
+                            <i class="fa fa-external-link small ms-1 opacity-75"/>
+                        </a>
                     </t>
 
                     <!-- Deeplink Mode Fallback -->

@@ -6,6 +6,10 @@
         justify-content: center;
     }
 
+    .o_google_pref_sdk_slot:empty {
+        min-height: 40px;
+    }
+
     .o_google_pref_deeplink {
         transition: all 0.2s ease-in-out;
         font-weight: 500;

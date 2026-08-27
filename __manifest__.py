@@ -1,6 +1,6 @@
 {
     'name': 'Google Preferred Source',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'category': 'Website/Website',
     'summary': 'Help readers and shoppers find your publication/store as a preferred source in Google Search, Top Stories & AI Overviews',
     'description': """
@@ -14,7 +14,6 @@ Key Features:
 -------------
 * **Per-Website Configuration**: Configure integration mode, theme, and language per website in Website Settings.
 * **Standard JavaScript SDK**: Automatic rendering of Google's official localized badge.
-* **Advanced JavaScript Mode**: Programmatic initialization and custom trigger handling.
 * **Deeplink Direct URL**: Direct fallback to Google's Source Preferences tool (`https://www.google.com/preferences/source?q=DOMAIN`).
 * **Drag-and-Drop Website Building Block**: Add the "Google Preferred Source" snippet anywhere on your pages via Website Builder.
 * **Automatic Placement Options**: Optionally display in Website Footer or eCommerce Product Pages.
