@@ -1,14 +1,28 @@
 {
-    'name': 'Google Preferred Source',
+    'name': 'Google Preferred Source - SEO & AI Search (GEO) Booster',
     'version': '19.0.1.1.0',
     'category': 'Website/Website',
-    'summary': 'Help readers and shoppers find your publication/store as a preferred source in Google Search, Top Stories & AI Overviews',
+    'summary': 'SEO & GEO booster: get picked as a Preferred Source in Google SERP, Top Stories & AI Overviews - website & eCommerce',
     'description': """
-Google Preferred Sources for Odoo 19 Website & eCommerce
-=========================================================
-Integrate Google's official Preferred Sources SDK and Deeplink flow into your Odoo Website and eCommerce store.
+Google Preferred Source - SEO & AI Search (GEO) Booster for Odoo 19
+===================================================================
+An SEO and GEO (Generative Engine Optimization) tool for your Odoo Website and
+eCommerce store. It adds Google's official Preferred Sources button to your site so
+readers and shoppers can tell Google: "show me more from this site".
 
-Developed by Asad Ali at Softosmith (https://softosmith.com).
+Why it matters for SEO and AI search:
+-------------------------------------
+* **Google SERP ranking signal**: Visitors who mark you as a preferred source see your
+  pages surface higher and more often in their Google Search results (SERP).
+* **Top Stories placement**: Publishers and news sites get repeated Top Stories
+  visibility with the readers who opted in.
+* **AI Overviews / GEO / AEO**: Google's AI Overviews and AI Mode draw on the sources a
+  user prefers. Being a preferred source is one of the few direct levers you have on
+  AI search visibility - Generative Engine Optimization and Answer Engine Optimization.
+* **Brand-loyal organic traffic**: Zero ad spend. Each opt-in is a long-lived organic
+  search signal for that reader.
+* **Great for**: news and magazine publishers, blogs, content marketing sites,
+  eCommerce brands, SaaS sites, and any Odoo website doing serious SEO.
 
 Key Features:
 -------------
@@ -18,6 +32,13 @@ Key Features:
 * **Drag-and-Drop Website Building Block**: Add the "Google Preferred Source" snippet anywhere on your pages via Website Builder.
 * **Automatic Placement Options**: Optionally display in Website Footer or eCommerce Product Pages.
 * **Responsive & Localized**: Supports Light and Dark themes and automatic or manual language overrides.
+* **SEO safe**: No layout shift, no render blocking, no impact on Core Web Vitals.
+
+Keywords: SEO, GEO, AEO, Google SERP, AI Overviews, AI Mode, generative engine
+optimization, answer engine optimization, AI search visibility, Google Search, Top
+Stories, organic traffic, website SEO, ecommerce SEO, publisher SEO.
+
+Developed by Asad Ali at Softosmith (https://softosmith.com).
     """,
     'author': 'Asad Ali (Softosmith)',
     'website': 'https://softosmith.com',
@@ -44,6 +65,8 @@ Key Features:
     },
     'images': [
         'static/description/banner.png',
+        'static/description/screenshot_settings.png',
+        'static/description/screenshot_badge.png',
     ],
     'installable': True,
     'application': True,
