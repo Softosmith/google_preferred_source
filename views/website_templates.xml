@@ -5,9 +5,7 @@
         <head position="inside">
             <t t-set="curr_website" t-value="website or request.env['website'].get_current_website()"/>
             <t t-if="curr_website and curr_website.has_google_preferred_source">
-                <t t-if="curr_website.google_preferred_source_mode == 'js'">
-                    <script async="async" src="https://news.google.com/swg/js/v1/publisher.js"></script>
-                </t>
+                <script async="async" src="https://news.google.com/swg/js/v1/publisher.js"></script>
             </t>
         </head>
         <!-- Auto Footer display -->

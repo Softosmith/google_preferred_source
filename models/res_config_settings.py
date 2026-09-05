@@ -12,10 +12,6 @@ class ResConfigSettings(models.TransientModel):
         related='website_id.has_google_preferred_source',
         readonly=False,
     )
-    google_preferred_source_mode = fields.Selection(
-        related='website_id.google_preferred_source_mode',
-        readonly=False,
-    )
     google_preferred_source_theme = fields.Selection(
         related='website_id.google_preferred_source_theme',
         readonly=False,
@@ -26,9 +22,5 @@ class ResConfigSettings(models.TransientModel):
     )
     google_preferred_source_auto_footer = fields.Boolean(
         related='website_id.google_preferred_source_auto_footer',
-        readonly=False,
-    )
-    google_preferred_source_auto_product = fields.Boolean(
-        related='website_id.google_preferred_source_auto_product',
         readonly=False,
     )

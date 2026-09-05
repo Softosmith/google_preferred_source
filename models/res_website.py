@@ -13,11 +13,6 @@ class Website(models.Model):
         string="Google Preferred Source",
         help="Allow website visitors to add your site as a preferred source in Google Search."
     )
-    google_preferred_source_mode = fields.Selection([
-        ('js', 'Standard JavaScript Button'),
-        ('deeplink', 'Deeplink / Direct URL'),
-    ], string="Integration Mode", default='js', required=True)
-
     google_preferred_source_theme = fields.Selection([
         ('light', 'Light'),
         ('dark', 'Dark'),
@@ -31,11 +26,6 @@ class Website(models.Model):
     google_preferred_source_auto_footer = fields.Boolean(
         string="Show in Footer",
         help="Automatically display the Preferred Source button in the website footer."
-    )
-
-    google_preferred_source_auto_product = fields.Boolean(
-        string="Show on Product Pages",
-        help="Automatically display the Preferred Source button on eCommerce product pages."
     )
 
     def get_google_preferred_source_url(self):

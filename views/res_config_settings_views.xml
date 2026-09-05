@@ -11,27 +11,17 @@
                     <field name="has_google_preferred_source"/>
                     <div class="content-group" invisible="not has_google_preferred_source">
                         <div class="row mt16">
-                            <label class="col-lg-4 o_light_label" string="Integration Mode" for="google_preferred_source_mode"/>
-                            <field name="google_preferred_source_mode" widget="radio" class="col-lg-8" required="has_google_preferred_source"/>
-                        </div>
-                        <div class="row mt8" invisible="google_preferred_source_mode != 'js'">
                             <label class="col-lg-4 o_light_label" string="Button Theme" for="google_preferred_source_theme"/>
                             <field name="google_preferred_source_theme" widget="radio" options="{'horizontal': true}" class="col-lg-8"/>
                         </div>
-                        <div class="row mt8" invisible="google_preferred_source_mode != 'js'">
+                        <div class="row mt8">
                             <label class="col-lg-4 o_light_label" string="Language Code Override" for="google_preferred_source_lang"/>
                             <field name="google_preferred_source_lang" placeholder="e.g. en, es, fr (leave blank for automatic)" class="col-lg-8"/>
                         </div>
-                        <div class="row mt8">
+                        <div class="row mt8" id="google_preferred_source_auto_footer_row">
                             <div class="col-12">
                                 <field name="google_preferred_source_auto_footer"/>
                                 <label class="o_light_label ms-2" string="Show automatically in Website Footer" for="google_preferred_source_auto_footer"/>
-                            </div>
-                        </div>
-                        <div class="row mt8">
-                            <div class="col-12">
-                                <field name="google_preferred_source_auto_product"/>
-                                <label class="o_light_label ms-2" string="Show automatically on eCommerce Product Pages" for="google_preferred_source_auto_product"/>
                             </div>
                         </div>
                     </div>

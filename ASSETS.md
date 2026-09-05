@@ -1,5 +1,9 @@
 # Store assets — copy, paste, done
 
+This is the **content/blog site app** (`google_preferred_source`, Website only — no
+eCommerce). Its sibling app, `google_preferred_source_sale`, has its own `ASSETS.md`
+in its own folder — don't mix the two up, their banner/hero copy and icon differ.
+
 `index.html` references these files by plain relative filename. All 9 must exist in
 `static/description/` before publishing, or the listing shows broken-image icons.
 Only **png / gif / jpeg** are accepted by the Odoo Apps store.
@@ -10,7 +14,7 @@ Only **png / gif / jpeg** are accepted by the Odoo Apps store.
 | `hero.png` | 1200×500 | Prompt 2 — has text |
 | `icon.png` | 256×256 | Prompt 3 — no text |
 | `feature_sdk.png` | 256×256 transparent | Prompt 4 — no text |
-| `feature_ecommerce.png` | 256×256 transparent | Prompt 5 — no text |
+| `feature_fallback.png` | 256×256 transparent | Prompt 5 — no text |
 | `feature_snippet.png` | 256×256 transparent | Prompt 6 — no text |
 | `logo_softosmith.png` | ~520×180 transparent | Your **dark-text** logo (page is white) |
 | `screenshot_settings.png` | ~1600px wide | Real screenshot |
@@ -39,7 +43,7 @@ sizes it to 260px wide and lets the height follow.
 > spelled exactly as written:
 > - Headline, very large, dark slate #1E293B: "Google Preferred Source"
 > - Subheadline below it, medium size, purple #714B67: "SEO + AI GEO for Odoo"
-> - Small line below that, grey #64748B: "Website and eCommerce"
+> - Small line below that, grey #64748B: "For Websites & Blogs"
 > - A small rounded pill badge at the bottom, purple #714B67 fill with white text:
 >   "Odoo 19 - Free"
 >
@@ -93,13 +97,13 @@ sizes it to 260px wide and lets the height follow.
 > red #EA4335 and green #34A853. Consistent 4px stroke weight, 16 percent padding,
 > minimal two-colour design. No words, no logos, no watermark, no background.
 
-## Prompt 5 — `feature_ecommerce.png` (256×256, transparent background)
+## Prompt 5 — `feature_fallback.png` (256×256, transparent background)
 
 > A 256×256 flat vector icon on a fully transparent background, no text and no letters.
-> A simple shopping bag outline drawn in Odoo purple #714B67, with a small rounded pill
-> badge overlapping its lower-right corner accented by a single blue #4285F4 dot.
-> Consistent 4px stroke weight, 16 percent padding, minimal design. No words, no logos,
-> no watermark, no background.
+> A rounded-shield outline drawn in Odoo purple #714B67, containing a small link/chain
+> glyph in its centre, with a single blue #4285F4 dot at the shield's top point.
+> Consistent 4px stroke weight, 16 percent padding, minimal two-colour design. No words,
+> no logos, no watermark, no background.
 
 ## Prompt 6 — `feature_snippet.png` (256×256, transparent background)
 
@@ -124,10 +128,10 @@ Crop tight. No browser chrome, no desktop, no personal data, no customer names.
 ~1600px wide, saved as PNG.
 
 **`screenshot_settings.png`** — Website ▸ Configuration ▸ Settings, scrolled to the
-Google Preferred Source block, toggle switched on, mode / theme / language options all
-visible.
+Google Preferred Source block, toggle switched on, theme / language / footer options
+all visible.
 
-**`screenshot_badge.png`** — switch the module to Standard JS Badge mode, open your
-website front-end, and capture the real Google badge rendered on a product page or in
-the footer, with a little of the surrounding page for context. This is the shot that
-carries the genuine Google branding and proves the module works.
+**`screenshot_badge.png`** — with the module enabled, open your website front-end and
+capture the real Google badge rendered in the footer or on a blog/content page, with a
+little of the surrounding page for context. This is the shot that carries the genuine
+Google branding and proves the module works.
