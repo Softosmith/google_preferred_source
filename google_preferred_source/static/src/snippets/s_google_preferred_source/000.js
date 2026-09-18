@@ -1,35 +1,39 @@
-import { Interaction } from "@web/public/interaction";
-import { registry } from "@web/core/registry";
+/** @odoo-module **/
+
+import publicWidget from "@web/legacy/js/public/public_widget";
 
 const SDK_RENDER_TIMEOUT = 3000;
 
-export class GooglePreferredSource extends Interaction {
-    static selector = ".s_google_preferred_source";
+publicWidget.registry.GooglePreferredSource = publicWidget.Widget.extend({
+    selector: ".s_google_preferred_source",
+    disabledInEditableMode: false,
 
-    setup() {
+    start: function () {
         this.slotEl = this.el.querySelector(".o_google_pref_sdk_slot");
         this.fallbackEl = this.el.querySelector(".o_google_pref_fallback");
         this._timeoutId = null;
-    }
 
-    start() {
         if (this.slotEl && this.fallbackEl) {
             this._timeoutId = setTimeout(
                 () => this.showFallbackIfEmpty(),
                 SDK_RENDER_TIMEOUT
             );
         }
-    }
+        return this._super.apply(this, arguments);
+    },
 
-    destroy() {
+    destroy: function () {
         if (this._timeoutId) {
             clearTimeout(this._timeoutId);
             this._timeoutId = null;
         }
-        super.destroy();
-    }
+        this._super.apply(this, arguments);
+    },
 
-    showFallbackIfEmpty() {
+    showFallbackIfEmpty: function () {
+        if (!this.slotEl || !this.fallbackEl) {
+            return;
+        }
         const rendered = this.slotEl.shadowRoot
             || this.slotEl.childElementCount > 0
             || this.slotEl.getBoundingClientRect().height > 0;
@@ -37,8 +41,7 @@ export class GooglePreferredSource extends Interaction {
             this.slotEl.classList.add("d-none");
             this.fallbackEl.classList.remove("d-none");
         }
-    }
-}
+    },
+});
 
-registry.category("public.interactions").add(
-    "google_preferred_source.s_google_preferred_source", GooglePreferredSource);
+export default publicWidget.registry.GooglePreferredSource;

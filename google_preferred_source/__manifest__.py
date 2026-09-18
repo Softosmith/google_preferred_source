@@ -1,10 +1,10 @@
 {
     'name': 'Google Preferred Source - SEO & AI Search (GEO) Booster',
-    'version': '18.0.1.0.0',
+    'version': '17.0.1.0.0',
     'category': 'Website/Website',
     'summary': 'SEO & GEO booster: get picked as a Preferred Source in Google SERP, Top Stories & AI Overviews',
     'description': """
-Google Preferred Source - SEO & AI Search (GEO) Booster for Odoo 18
+Google Preferred Source - SEO & AI Search (GEO) Booster for Odoo 17
 ===================================================================
 An SEO and GEO (Generative Engine Optimization) tool for your Odoo Website. It adds
 Google's official Preferred Sources button to your site so readers can tell Google:

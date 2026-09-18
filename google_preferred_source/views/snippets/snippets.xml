@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="snippets" inherit_id="website.snippets" name="Google Preferred Source Snippet Palette">
-        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+        <xpath expr="//div[@id='snippet_structure']//div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
-               group="social"
                t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">
                 <keywords>google, preferred source, news, publisher, search, follow, top stories, ai overviews</keywords>
             </t>
         </xpath>
-        <xpath expr="//snippets[@id='snippet_content']" position="inside">
+        <xpath expr="//div[@id='snippet_content']//div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
                t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">

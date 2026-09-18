@@ -1,7 +1,7 @@
-# Google Preferred Source for Odoo 18 Website
+# Google Preferred Source for Odoo 17 Website
 
 [![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue.svg)](LICENSE)
-[![Odoo Version](https://img.shields.io/badge/Odoo-18.0-purple.svg)](https://www.odoo.com)
+[![Odoo Version](https://img.shields.io/badge/Odoo-17.0-purple.svg)](https://www.odoo.com)
 [![Developer](https://img.shields.io/badge/Developed%20By-Asad%20Ali%20%40%20Softosmith-orange.svg)](https://softosmith.com)
 
 Developed by **Asad Ali** at **[Softosmith.com](https://softosmith.com)**.
