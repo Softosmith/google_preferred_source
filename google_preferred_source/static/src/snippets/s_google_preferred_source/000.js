@@ -9,12 +9,24 @@ export class GooglePreferredSource extends Interaction {
     setup() {
         this.slotEl = this.el.querySelector(".o_google_pref_sdk_slot");
         this.fallbackEl = this.el.querySelector(".o_google_pref_fallback");
+        this._timeoutId = null;
     }
 
     start() {
         if (this.slotEl && this.fallbackEl) {
-            this.waitForTimeout(this.showFallbackIfEmpty, SDK_RENDER_TIMEOUT);
+            this._timeoutId = setTimeout(
+                () => this.showFallbackIfEmpty(),
+                SDK_RENDER_TIMEOUT
+            );
         }
+    }
+
+    destroy() {
+        if (this._timeoutId) {
+            clearTimeout(this._timeoutId);
+            this._timeoutId = null;
+        }
+        super.destroy();
     }
 
     showFallbackIfEmpty() {
