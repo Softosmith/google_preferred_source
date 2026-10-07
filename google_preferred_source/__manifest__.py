@@ -68,6 +68,7 @@ Developed by Asad Ali at Softosmith (https://softosmith.com).
         'static/description/banner.png',
         'static/description/screenshot_settings.png',
         'static/description/screenshot_badge_footer.png',
+        'static/description/sidebar.png',
     ],
     'installable': True,
     'application': True,
