@@ -4,14 +4,14 @@
         <xpath expr="//div[@id='snippet_structure']//div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
-               t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">
+               t-thumbnail="/google_preferred_source/static/src/img/google_icon_v2.png">
                 <keywords>google, preferred source, news, publisher, search, follow, top stories, ai overviews</keywords>
             </t>
         </xpath>
         <xpath expr="//div[@id='snippet_content']//div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
-               t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">
+               t-thumbnail="/google_preferred_source/static/src/img/google_icon_v2.png">
                 <keywords>google, preferred source, news, publisher, search, follow</keywords>
             </t>
         </xpath>
