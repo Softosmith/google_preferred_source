@@ -10,13 +10,84 @@
         min-height: 40px;
     }
 
-    .o_google_pref_deeplink {
-        transition: all 0.2s ease-in-out;
+    .o_google_pref_fallback {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 38px;
+        padding: 8px 18px 8px 14px;
+        border-radius: 9999px;
+        font-family: "Google Sans", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
         font-weight: 500;
+        line-height: 20px;
+        text-decoration: none !important;
+        transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+        cursor: pointer;
 
-        &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+        .o_google_g_logo {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .o_google_pref_text {
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        // Hide legacy external link icon
+        .fa-external-link {
+            display: none !important;
+        }
+
+        // Default & Dark Theme (matches official dark badge unless explicitly light)
+        &,
+        &.o_google_pref_theme_dark {
+            background-color: #1f1f1f !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+            &:hover {
+                background-color: #2d2e30 !important;
+                border-color: rgba(255, 255, 255, 0.35) !important;
+                color: #ffffff !important;
+            }
+
+            .fa-google {
+                color: #ffffff !important;
+            }
+        }
+
+        // Light Theme (Official Google Light Badge)
+        &.o_google_pref_theme_light {
+            background-color: #ffffff !important;
+            color: #1f1f1f !important;
+            border: 1px solid #dadce0 !important;
+            box-shadow: 0 1px 2px rgba(60, 64, 67, 0.15);
+
+            &:hover {
+                background-color: #f8f9fa !important;
+                border-color: #c6c9cc !important;
+                color: #1f1f1f !important;
+            }
+        }
+    }
+}
+
+// In Website Editor (live editor), display button immediately on drag-and-drop
+:is(html, body).editor_enable,
+.editor_enable {
+    .s_google_preferred_source {
+        .o_google_pref_sdk_slot {
+            display: none !important;
+        }
+        .o_google_pref_fallback {
+            display: inline-flex !important;
         }
     }
 }
