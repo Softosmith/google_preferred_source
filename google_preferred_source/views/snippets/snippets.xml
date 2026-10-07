@@ -5,14 +5,14 @@
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
                group="social"
-               t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">
+               t-thumbnail="/google_preferred_source/static/src/img/google_icon_v2.png">
                 <keywords>google, preferred source, news, publisher, search, follow, top stories, ai overviews</keywords>
             </t>
         </xpath>
         <xpath expr="//snippets[@id='snippet_content']" position="inside">
             <t t-snippet="google_preferred_source.s_google_preferred_source"
                string="Google Preferred Source"
-               t-thumbnail="/google_preferred_source/static/src/img/s_google_preferred_source.svg">
+               t-thumbnail="/google_preferred_source/static/src/img/google_icon_v2.png">
                 <keywords>google, preferred source, news, publisher, search, follow</keywords>
             </t>
         </xpath>
