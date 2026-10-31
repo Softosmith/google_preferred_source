@@ -1,10 +1,10 @@
 {
     'name': 'Google Preferred Source - SEO & AI Search (GEO) Booster',
-    'version': '19.0.2.0.0',
+    'version': '20.0.1.0.0',
     'category': 'Website/Website',
     'summary': 'SEO & GEO booster: get picked as a Preferred Source in Google SERP, Top Stories & AI Overviews',
     'description': """
-Google Preferred Source - SEO & AI Search (GEO) Booster for Odoo 19
+Google Preferred Source - SEO & AI Search (GEO) Booster for Odoo 20
 ===================================================================
 An SEO and GEO (Generative Engine Optimization) tool for your Odoo Website. It adds
 Google's official Preferred Sources button to your site so readers can tell Google:
@@ -30,10 +30,10 @@ Why it matters for SEO and AI search:
 
 Key Features:
 -------------
-* **Per-Website Configuration**: Configure integration mode, theme, and language per website in Website Settings.
+* **Per-Website Configuration**: Configure theme and language per website in Website Settings.
 * **Standard JavaScript SDK**: Automatic rendering of Google's official localized badge, with an automatic fallback link if the SDK doesn't render in time.
 * **Drag-and-Drop Website Building Block**: Add the "Google Preferred Source" snippet anywhere on your pages via Website Builder.
-* **Automatic Placement Options**: Optionally display in Website Footer or eCommerce Product Pages.
+* **Automatic Footer Placement**: Optionally display the button in the Website Footer.
 * **Responsive & Localized**: Supports Light and Dark themes and automatic or manual language overrides.
 * **SEO safe**: No layout shift, no render blocking, no impact on Core Web Vitals.
 
