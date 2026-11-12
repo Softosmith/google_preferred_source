@@ -65,7 +65,7 @@ Developed by Asad Ali at Softosmith (https://softosmith.com).
         ],
     },
     'images': [
-        'static/description/banner.png',
+        'static/description/banner.gif',
         'static/description/screenshot_settings.png',
         'static/description/screenshot_badge_footer.png',
         'static/description/sidebar.png',
